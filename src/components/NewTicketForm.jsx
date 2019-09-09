@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
-import { Route, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 class NewTicketForm extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
     this._names = null;
     this._location = null;
     this._issue = null;
@@ -21,12 +21,12 @@ class NewTicketForm extends React.Component {
     this._names.value = '';
     this._location.value = '';
     this._issue.value = '';
-    this.setState({redirectToHome: true})
+    this.setState({redirectToHome: true});
   }
 
   render() {
     if (this.state.redirectToHome) {
-      return <Redirect to='/' />
+      return <Redirect to='/' />;
     }
     return (
       <div>
